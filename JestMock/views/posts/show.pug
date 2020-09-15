@@ -1,0 +1,16 @@
+html
+  include ../partials/head.pug
+  body
+    include ../partials/navbar.pug
+    div.container.d-flex.justify-content-end.mb-4
+      a.btn.btn-outline-primary.mx-1.btn-sm(href="/admin/posts") Back to Home
+      a.btn.btn-outline-dark.mx-1.btn-sm(href="/admin/posts/edit") Edit Post
+    div.container
+      div.container.my-4.p-4
+        div.container
+          a.text-decoration-none.post-title(href=`#`)= post.title
+        div.container
+          p.post-date= moment(post.createdAt).fromNow()
+        div.container.text-justify.mt-2
+          each paragraph in post.body.split('\n')
+            p.post-body= paragraph

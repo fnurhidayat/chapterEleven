@@ -1,0 +1,41 @@
+{
+  "name": "Jest",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "node bin/www",
+    "dev": "nodemon --exec 'eslint . --fix && node bin/www'",
+    "lint": "eslint . --fix",
+    "test": "jest --ci --forceExit --detectOpenHandles --verbose --collect-coverage",
+    "test:watch": "jest --ci --detectOpenHandles --verbose --watchAll --collect-coverage",
+    "db:create": "node_modules/sequelize-cli/lib/sequelize db:create --env $NODE_ENV",
+    "db:migrate": "node_modules/sequelize-cli/lib/sequelize db:migrate --env $NODE_ENV",
+    "db:setup": "(npm run db:create --silent || echo \"Database already exists\")&& npm run db:migrate"
+  },
+  "keywords": [],
+  "bin": {
+    "server": "bin/www"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "imagekit": "^3.0.5",
+    "moment": "^2.26.0",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.2",
+    "pg": "^8.2.1",
+    "pg-hstore": "^2.3.3",
+    "pug": "^3.0.0",
+    "sequelize": "^5.21.10",
+    "sequelize-cli": "^5.5.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.2.0",
+    "faker": "^4.1.0",
+    "jest": "^26.0.1",
+    "nodemon": "^2.0.4",
+    "supertest": "^4.0.2"
+  }
+}

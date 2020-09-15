@@ -1,0 +1,33 @@
+* {
+ font-family: 'Montserrat', sans-serif;
+}
+/* This style is being used on List of Post */
+.post-table {
+  font-size:14px;
+}
+
+.post-title {
+  color: rgba(0,0,0,0.8);
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+.post-date {
+  color: rgba(0,0,0,0.7);
+  font-size: 0.7em; 
+}
+
+.post-body {
+  font-size: 0.9em;
+}
+
+.form-control {
+  border: none !important;
+  border-color: transparent !important;
+}
+
+.form-borderless:focus {
+  border-color: inherit;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}

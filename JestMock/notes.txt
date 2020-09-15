@@ -1,0 +1,24 @@
+Client-Side Rendering
+1. Click Button, and redirect to landing page
+2. Less Request Happened
+
+Server-Side Rendering
+1. Initial Load is way more faster
+2. Request is always happening to the server
+   Even with Cache
+
+Template Engine in Express
+1. Pug [x] => For the easy to use syntax
+2. EJS
+3. Handlebars
+4. Jade
+
+You need to learn more about this:
+1. Partial
+2. Mixin
+3. Multipart FormData
+
+If you make the UI is way more pretty,
+you can learn CSS or at least just
+learn the UI Framework such as Bootstrap
+

@@ -1,0 +1,14 @@
+html
+  include ../partials/head.pug
+  body
+    include ../partials/navbar.pug
+    div.container.d-flex.mb-4
+      div.container.my-4.p-4
+        form(action="/admin/posts/new" method="post")
+          div.form-group
+            input.form-borderless.form-control.post-title(name="title" type="text" placeholder="Input your title here")
+
+          div.form-group
+            textarea.form-borderless.form-control(rows="25" name="body" type="text" placeholder="Input your body here")
+
+          button.btn.btn-large.btn-success(type="submit") Create

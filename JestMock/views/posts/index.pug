@@ -1,0 +1,19 @@
+html
+  include ../partials/head.pug
+  body
+    include ../partials/navbar.pug
+    div.container.d-flex.mb-4
+      a.btn.btn-success.ml-auto.btn-sm(href="/admin/posts/new") Create new post
+    div.container
+      each post in posts
+        div.card.my-4.p-4
+          div.card-body
+            div.card-title.d-flex
+              a.text-decoration-none.post-title(href=`/admin/posts/${post.id}`)= post.title
+              span.badge= post.id
+            div.card-subtitle
+              p.post-date= moment(post.createdAt).fromNow()
+            div.card-text.mt-2
+              p.post-body= post.body.split('').splice(0, 255).join('')
+              if post.body.length > 255
+                a.text-decoration-none.post-body(href=`/admin/posts/${post.id}`) Read more
